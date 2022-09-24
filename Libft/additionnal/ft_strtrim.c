@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:18:05 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:19:49 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:52:17 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ static int	ft_fin(char const *s1, char const *set)
 		i++;
 	return (len - 1 - i);
 }
-
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
