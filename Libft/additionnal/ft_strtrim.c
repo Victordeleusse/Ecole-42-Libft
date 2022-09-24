@@ -6,9 +6,13 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:18:05 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/24 17:52:17 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:54:39 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Alloue avec malloc et retourne une copie de la chaine de caractères donnée 
+en argument, sans les caractères spécifiés dans le set donné en argument au 
+début et à la fin de la chaine de caractères. */
 
 #include "../libft.h"
 
