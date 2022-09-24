@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:12:15 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:20:59 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:25:20 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,28 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	toi;
-	int	neg;
+	long	i;
+	long	nbr;
+	int		isneg;
 
 	i = 0;
-	toi = 0;
-	neg = 1;
-	while (str[i] && ft_isspace(str[i]))
+	nbr = 0;
+	isneg = 0;
+	while (str[i] != '\0' && (str[i] == 32 || str[i] == '\t' || str[i] == '\n'
+			|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f'))
 		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (str[i] != '\0' && str[i] == '-')
 	{
-		if (str[i] == '-')
-			neg = -neg;
+		isneg = 1;
 		i++;
 	}
-	while (str[i] && ft_isdigit(str[i]))
-	{
-		toi = (toi * 10) + (str[i] - 48);
+	else if (str[i] == '+')
 		i++;
-	}
-	return (neg * toi);
+	while (str[i] != '\0' && ft_isdigit(str[i]))
+		nbr = (nbr * 10) + (str[i++] - '0');
+	if (isneg == 1)
+		return (-nbr);
+	return (nbr);
 }
 
 /*
