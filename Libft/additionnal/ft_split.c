@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:46:39 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:19:21 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:48:19 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	count_words(const char *str, char charset)
 	while (str[i] != '\0')
 	{
 		if ((str[i + 1] == charset || str[i + 1] == '\0') == 1
-				&& (str[i] == charset || str[i] == '\0') == 0)
+			&& (str[i] == charset || str[i] == '\0') == 0)
 			words++;
 		i++;
 	}
@@ -66,8 +66,7 @@ static int	write_split(char **split, const char *str, char charset)
 			j = 0;
 			while ((str[i + j] == charset || str[i + j] == '\0') == 0)
 				j++;
-			if ((split[word] = (char *)malloc(sizeof(char) * (j + 1))) == NULL)
-				return (unleah(split, word - 1));
+			split[word] = (char *)malloc(sizeof(char) * (j + 1));
 			write_word(split[word], str + i, charset);
 			i += j;
 			word++;
@@ -90,7 +89,6 @@ char	**ft_split(const char *str, char c)
 		return (NULL);
 	return (res);
 }
-
 
 // static size_t	ft_len_mot(char const *s, char c)
 // {
