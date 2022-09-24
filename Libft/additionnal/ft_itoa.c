@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 20:34:40 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:19:05 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:40:33 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,25 @@ static size_t	ft_len_int(int n)
 	return (len);
 }
 
-static char	*ft_strdup(const char *str)
-{
-	size_t	len;
-	size_t	i;
-	char	*resultat;
+// static char	*ft_duplicate_str(const char *str)
+// {
+// 	size_t	len;
+// 	size_t	i;
+// 	char	*resultat;
 
-	i = 0;
-	len = ft_strlen((char *)str);
-	resultat = (char *)malloc(sizeof(char) * (len + 1));
-	if (!resultat)
-		return (NULL);
-	while (str[i])
-	{
-		resultat[i] = str[i];
-		i++;
-	}
-	resultat[i] = '\0';
-	return (resultat);
-}
+// 	i = 0;
+// 	len = ft_strlen((char *)str);
+// 	resultat = (char *)malloc(sizeof(char) * (len + 1));
+// 	if (!resultat)
+// 		return (NULL);
+// 	while (str[i])
+// 	{
+// 		resultat[i] = str[i];
+// 		i++;
+// 	}
+// 	resultat[i] = '\0';
+// 	return (resultat);
+// }
 
 char	*ft_itoa(int n)
 {
@@ -77,12 +77,10 @@ char	*ft_itoa(int n)
 	return (resultat);
 }
 
-/*
-int	main(void)
-{
-	int	test = -2147483648;
+// int	main(void)
+// {
+// 	int	test = -2147483648;
 
-	printf("%s", ft_itoa(test));
-	return (0);
-}
-*/
+// 	printf("%s", ft_itoa(test));
+// 	return (0);
+// }
