@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:49:05 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:22:43 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/10/05 14:43:12 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)s + i);
 		else
 			i++;
 	}
-	if (s[i] == c)
+	if (s[i] == (char)c)
 		return ((char *)s + i);
 	return (NULL);
 }
