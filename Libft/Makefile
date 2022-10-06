@@ -1,6 +1,6 @@
 NAME = libft.a
 
-SRCS = $(wildcard ./libc/*.c) $(wildcard ./additional/*.c)
+SRCS = $(wildcard ./libc/*.c) $(wildcard ./additionnal/*.c)
 
 SRCSBONUS = $(wildcard ./bonus/*.c) 
 

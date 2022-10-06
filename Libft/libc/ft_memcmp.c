@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:09:25 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:22:17 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/10/05 16:02:43 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int	main(void)
+// {
+// 	char haystack[30] = "aabcabcd";
+// 	char needle[10] = "aabc";
+
+// 	printf("mon resultat : %d\n", ft_memcmp(haystack, needle, 3));
+// 	printf("la fonction : %d\n", memcmp(haystack, needle, 3));
+// 	return (0);
+// }

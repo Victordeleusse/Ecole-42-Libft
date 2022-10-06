@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 17:04:51 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:20:34 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:43:03 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*begin_old;
 	t_list	*begin_new;
-	int		size;
 
 	if (!lst || !f || !del)
 		return (NULL);

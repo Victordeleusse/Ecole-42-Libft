@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:27:17 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:21:10 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:13:33 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*str;
 
+	if ((nmemb == SIZE_MAX && size > 1) || (size == SIZE_MAX && nmemb > 1))
+		return (NULL);
 	str = (void *)malloc(nmemb * size);
 	if (!str)
 		return (NULL);
