@@ -6,81 +6,60 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 20:34:40 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/24 17:40:33 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:35:00 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static size_t	ft_len_int(int n)
+static size_t	count_size(long nb)
 {
-	size_t	len;
+	size_t	size;
 
-	if (n < 0)
-		len = 2;
-	else
-		len = 1;
-	while ((n / 10) != 0)
+	size = 0;
+	if (nb < 0)
 	{
-		n = n / 10;
-		len++;
+		nb = nb * (-1);
+		size = 1;
 	}
-	return (len);
+	if (nb == 0)
+		size = 1;
+	else
+	{
+		while (nb)
+		{
+			nb = nb / 10;
+			size++;
+		}
+	}
+	return (size);
 }
-
-// static char	*ft_duplicate_str(const char *str)
-// {
-// 	size_t	len;
-// 	size_t	i;
-// 	char	*resultat;
-
-// 	i = 0;
-// 	len = ft_strlen((char *)str);
-// 	resultat = (char *)malloc(sizeof(char) * (len + 1));
-// 	if (!resultat)
-// 		return (NULL);
-// 	while (str[i])
-// 	{
-// 		resultat[i] = str[i];
-// 		i++;
-// 	}
-// 	resultat[i] = '\0';
-// 	return (resultat);
-// }
 
 char	*ft_itoa(int n)
 {
-	size_t	len;
-	size_t	i;
-	char	*resultat;
-	size_t	k;
+	size_t	size;
+	long	nb;
+	char	*str;
+	int		is_negative;
 
-	i = 0;
-	k = 0;
-	len = ft_len_int(n);
-	resultat = (char *)malloc(sizeof(char) * (len + 1));
-	resultat[len] = '\0';
-	if (n < 0)
-	{	
-		resultat[0] = '-';
-		k = 1;
-		if (n == -2147483648)
-			return (ft_strdup("-2147483648"));
-		n = -n;
-	}
-	while (i < len - k)
+	size = count_size((long) n);
+	str = (char *) malloc(sizeof(char) * (size + 1));
+	if (str == NULL)
+		return (NULL);
+	nb = (long) n;
+	is_negative = 0;
+	if (nb < 0)
 	{
-		resultat[len - 1 - i] = (n % 10) + '0';
-		n = n / 10;
-		i++;
-	}	
-	return (resultat);
+		nb = nb * (-1);
+		str[0] = '-';
+		is_negative = 1;
+	}
+	str[size] = '\0';
+	while (size > (size_t) is_negative)
+	{
+		str[size - 1] = nb % 10 + '0';
+		nb = nb / 10;
+		size--;
+	}
+	return (str);
 }
-
-// int	main(void)
-// {
-// 	int	test = -2147483648;
-
-// 	printf("%s", ft_itoa(test));
-// 	return (0);
-// }
