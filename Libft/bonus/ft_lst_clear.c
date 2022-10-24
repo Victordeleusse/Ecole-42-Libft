@@ -6,41 +6,41 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 16:27:11 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/10/24 17:28:25 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:34:05 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
-{
-	t_list	*temp;
-	t_list	*begin;
-
-	if (!lst || !*lst || !del)
-		return ;
-	begin = *lst;
-	while (begin)
-	{
-		temp = (begin)->next;
-		ft_lstdelone((begin), del);
-		(begin) = temp;
-	}
-}
-
 // void	ft_lstclear(t_list **lst, void (*del)(void*))
 // {
+// 	t_list	*temp;
 // 	t_list	*begin;
 
-// 	if (!lst || !*lst)
+// 	if (!lst || !*lst || !del)
 // 		return ;
-// 	while (*lst != NULL)
+// 	begin = *lst;
+// 	while (begin)
 // 	{
-// 		begin = (*lst)->next;
-// 		ft_lstdelone((*lst), del);
-// 		(*lst) = begin;
+// 		temp = (begin)->next;
+// 		ft_lstdelone((begin), del);
+// 		(begin) = temp;
 // 	}
 // }
+
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*begin;
+
+	if (!lst || !*lst)
+		return ;
+	while (*lst != NULL)
+	{
+		begin = (*lst)->next;
+		ft_lstdelone((*lst), del);
+		(*lst) = begin;
+	}
+}
 
 // int	main(void)
 // {
