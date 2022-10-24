@@ -6,11 +6,12 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:27:17 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/10/05 17:13:33 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/10/24 22:47:13 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
