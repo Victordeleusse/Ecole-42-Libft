@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 11:33:36 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/21 11:22:24 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:28:07 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,11 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
-	char	*s1;
 
-	s1 = (char *)dst;
 	i = 0;
 	while (i < n)
 	{
-		*(char *)s1 = *(char *)src;
-		s1++;
-		src++;
+		*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
 		i++;
 	}
 	return (dst);
