@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 18:58:19 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/11/07 14:07:17 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/11/07 18:59:31 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /* Old functions */
 
@@ -63,7 +64,7 @@ char	*ft_strdup(const char *s);
 //			void	ft_strclr(char *s);
 //			void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 //			void	ft_striter(char *s, void (*f)(char *));
-//			void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
 //			char	*ft_strmap(char const *s, char (*f)(char));
 
 /* Additionnal functions */
