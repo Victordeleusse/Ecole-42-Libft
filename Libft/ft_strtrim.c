@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:18:05 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/11/07 14:14:06 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:03:18 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,45 +79,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	dest[i] = '\0';
 	return (dest);
 }
-
-// int main(void)
-// {
-// 	printf("ma fonction : %s\n", ft_strtrim("   xxx   xxx", " x"));
-// 	printf("comp : %d", ft_memcmp("", ft_strtrim("   xxx   xxx", " x"), 5));
-
-	//printf("man : %s\n", strtrim("   xxxtripouille", " x"));
-	
-	// /* 1 */ check(!strcmp(s, "tripouille"));
-	// /* 2 */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
-
-	// s = ft_strtrim("tripouille   xxx", " x");
-	// /* 3 */ check(!strcmp(s, "tripouille"));
-	// /* 4 */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
-
-	// s = ft_strtrim("   xxxtripouille   xxx", " x");
-	// /* 5 */ check(!strcmp(s, "tripouille"));
-	// /* 6 */ mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
-	
-	// s = ft_strtrim("   xxx   xxx", " x");
-	// /* 7 */ check(!strcmp(s, ""));
-	// /* 8 */ mcheck(s, 1); free(s); showLeaks();
-
-	// s = ft_strtrim("", "123");
-	// /* 9 */ check(!strcmp(s, ""));
-	// /* 10 */ mcheck(s, 1); free(s); showLeaks();
-
-	// s = ft_strtrim("123", "");
-	// /* 11 */ check(!strcmp(s, "123"));
-	// /* 12 */ mcheck(s, 4); free(s); showLeaks();
-
-	// s = ft_strtrim("", "");
-	// /* 13 */ check(!strcmp(s, ""));
-	// /* 14 */ mcheck(s, 1); free(s); showLeaks();
-	
-	// s = ft_strtrim("abcdba", "acb");
-	// /* opsec-infosec 15 */ check(!strcmp(s, "d"));
- 	// /* opsec-infosec 16 */ mcheck(s, 2); free(s); showLeaks();
-	
-// 	write(1, "\n", 1);
-// 	return (0);
-// }
