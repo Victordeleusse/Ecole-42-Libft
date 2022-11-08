@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:35:59 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/09/23 16:34:06 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:05:08 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,3 @@ size_t	ft_putnbr(int nbr)
 	ft_affichage_nbr(nbr);
 	return (len);
 }
-
-// int	main(void)
-// {
-// 	int		nbr = -37;
-// 	size_t	i;
-	
-// 	i = ft_putnbr(nbr);
-// 	printf("\n\n%d", i);
-// 	return (0);
-// }
