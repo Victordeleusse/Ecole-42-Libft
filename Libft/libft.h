@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 18:58:19 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/11/07 18:59:31 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/11/08 10:27:43 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *str, int c);
@@ -104,7 +104,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 size_t	ft_putstr(char *str);
 size_t	ft_putnbr(int nbr);
 size_t	ft_putchar(char c);
-size_t	ft_strlen(char *str);
 size_t	ft_putadress_min_hex(void *entree);
 size_t	ft_putnbr_hexmin(int nbr);
 size_t	ft_putnbr_hexmaj(int nbr);
