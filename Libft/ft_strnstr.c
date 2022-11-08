@@ -6,7 +6,7 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 10:23:54 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/11/07 17:02:37 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:01:47 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,6 @@ char	*ft_strnstr(const char	*big, const char *little, size_t n)
 //  	char haystack[30] = "aaabcabcd";
 //  	// char needle[10] = "aabc";
 // 	// char * empty = (char*)"";
-	
 // 	printf("%s", ft_strnstr(haystack, "a", 2));
 // 	// /* 1 */ check(ft_strnstr(haystack, needle, 0) == 0);
 // 	// /* 2 */ check(ft_strnstr(haystack, needle, -1) == haystack + 1);
