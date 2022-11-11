@@ -6,9 +6,15 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:27:17 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/11/07 14:16:57 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/11/10 18:56:49 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** DESCRIPTION : La fonction alloue et renvoie un pointeur 
+sur une zone de la mémoire de nmemb * size octets, tous initialisés avec des 0.
+**
+*/
 
 #include "libft.h"
 #include <stdint.h>
@@ -17,7 +23,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*str;
 
-	if ((nmemb == SIZE_MAX && size > 1) || (size == SIZE_MAX && nmemb > 1))
+	if ((nmemb != 0 && size > (SIZE_MAX / nmemb)))
 		return (NULL);
 	str = (void *)malloc(nmemb * size);
 	if (!str)

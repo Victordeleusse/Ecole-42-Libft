@@ -6,9 +6,15 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:18:27 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/11/07 14:14:50 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/11/10 19:03:01 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** DESCRIPTION : La fonction strdup() renvoie un pointeur sur une nouvelle
+** chaîne de caractères qui est dupliquée depuis s. MALLOC
+** 
+*/
 
 #include "libft.h"
 

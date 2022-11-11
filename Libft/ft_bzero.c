@@ -6,9 +6,14 @@
 /*   By: vde-leus <vde-leus@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 11:04:11 by vde-leus          #+#    #+#             */
-/*   Updated: 2022/11/07 14:17:01 by vde-leus         ###   ########.fr       */
+/*   Updated: 2022/11/10 18:58:54 by vde-leus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** DESCRIPTION : La fonction bzero() met à 0 (octets contenant « \0 ») les 
+** n premiers octets du bloc pointé par s.  
+*/
 
 #include "libft.h"
 
